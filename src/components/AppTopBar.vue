@@ -115,12 +115,10 @@ export default {
     methods: {
         toggleColorTheme() {
 this.$vuetify.theme.dark= !this.$vuetify.theme.dark;
-localStorage.setItem(
-"luna.color_theme",
-`${this.$vuetify.theme.dark? "dark" : "light"}`
-);
-},
-}
+        localStorage.setItem("luna.color_theme",
+        `${this.$vuetify.theme.dark? "dark" : "light"}`);
+        },
+    }
 }
 </script>
 
