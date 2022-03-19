@@ -3,6 +3,8 @@ import VueRouter from "vue-router";
 
 import PaginaInicio from "../views/PaginaInicio.vue";
 import PaginaSobre from "../views/PaginaSobre.vue";
+import PaginaLoja from "../views/PaginaLoja.vue";
+
 
 Vue.use(VueRouter);
 
@@ -16,6 +18,11 @@ const routes = [
     path: "/sobre",
     name: "sobre",
     component: PaginaSobre,
+  },
+  {
+    path: "/loja",
+    name: "loja",
+    component: PaginaLoja,
   },
 ];
 
