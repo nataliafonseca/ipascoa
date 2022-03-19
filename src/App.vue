@@ -38,11 +38,10 @@ body {
 ul {
   list-style: none;
 }
-
-a {
-  text-decoration: none;
-  color: #1b5e20 !important;
-}
+a {  
+  text-decoration: none;  
+  color: #66BB6A !important;
+} 
 
 a:hover {
   color: #0b310e !important;

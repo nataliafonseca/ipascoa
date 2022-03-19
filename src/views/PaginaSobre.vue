@@ -159,4 +159,8 @@ h3 {
 .c-contact a p {
   margin: 0;
 }
+
+a {
+  color: #A5D6A7;
+}
 </style>
