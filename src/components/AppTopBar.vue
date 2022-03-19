@@ -1,6 +1,6 @@
 <template>
     <div class="app-top-bar">
-         <v-app-bar color="deep-purple accent-4" dense dark>
+         <v-app-bar color="green darken-4" dense dark>
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
       <v-toolbar-title class="pl-0">iPascoa</v-toolbar-title>
@@ -24,21 +24,21 @@
           v-model="group"
           active-class="deep-purple--text text--accent-4"
         >
-            <v-router-link to="/">
+            <router-link to="/">
           <v-list-item>
             <v-list-item-icon>
               <v-icon>mdi-home</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Inicio</v-list-item-title>
           </v-list-item>
-          </v-router-link>
+          </router-link>
 
           <!-- <v-router-link to="/"> -->
           <v-list-item>
             <v-list-item-icon>
               <v-icon>mdi-store</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Loja1</v-list-item-title>
+            <v-list-item-title>Posto Renoir</v-list-item-title>
           </v-list-item>
           <!-- </v-router-link> -->
 
@@ -47,7 +47,7 @@
             <v-list-item-icon>
               <v-icon>mdi-store</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Loja2</v-list-item-title>
+            <v-list-item-title>Quinta Beija-flor</v-list-item-title>
           </v-list-item>
           <!-- </v-router-link> -->
 
@@ -56,27 +56,27 @@
             <v-list-item-icon>
               <v-icon>mdi-store</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Loja3</v-list-item-title>
+            <v-list-item-title>Passarela Raiz dejavú</v-list-item-title>
           </v-list-item>
           <!-- </v-router-link> -->
 
-           <!-- <v-router-link to="/"> -->
+           <router-link to="/registro">
           <v-list-item>
             <v-list-item-icon>
               <v-icon>mdi-account-plus</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Cadastro</v-list-item-title>
           </v-list-item>
-          <!-- </v-router-link> -->
+          </router-link>
 
-        <v-router-link to="/sobre">
+        <router-link to="/sobre">
          <v-list-item>
             <v-list-item-icon>
               <v-icon>mdi-information</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Sobre</v-list-item-title>
           </v-list-item>
-        </v-router-link>
+        </router-link>
 
         </v-list-item-group>
       </v-list>
