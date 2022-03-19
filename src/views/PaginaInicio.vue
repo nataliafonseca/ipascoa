@@ -1,9 +1,9 @@
 <template>
-  <v-app></v-app>
+  <div></div>
 </template>
 
 <script>
 export default {
-  name: "App",
+  name: "PaginaInicio",
 };
 </script>
