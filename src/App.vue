@@ -3,7 +3,7 @@
     <div class="mobile-container">
       <AppTopBar />
       <router-view />
-      <RodaPe/>
+      <RodaPe />
     </div>
   </v-app>
 </template>
