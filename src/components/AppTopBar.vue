@@ -52,42 +52,17 @@
               <v-list-item-title>Inicio</v-list-item-title>
             </v-list-item>
           </router-link>
-
-          <!-- <router-link to="/"> -->
+          
+          <div v-for="loja in lojas" :key="loja.id">
+          <router-link :to="`/loja/${loja.id}`">
           <v-list-item>
             <v-list-item-icon>
               <v-icon>mdi-store</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Posto Renoir</v-list-item-title>
+            <v-list-item-title>{{ loja.nome }}</v-list-item-title>
           </v-list-item>
-          <!-- </router-link> -->
-
-          <!-- <router-link to="/"> -->
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-store</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title> Quinta Beija-flor </v-list-item-title>
-          </v-list-item>
-          <!-- </router-link> -->
-
-          <!-- <router-link to="/"> -->
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-store</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title> Passarela Raiz dejavú </v-list-item-title>
-          </v-list-item>
-          <!-- </router-link> -->
-
-          <router-link to="/registro">
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-account-plus</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Cadastro</v-list-item-title>
-            </v-list-item>
           </router-link>
+        </div>
 
           <router-link to="/sobre">
             <v-list-item>
@@ -105,21 +80,34 @@
 
 <script>
 export default {
-  name: "AppTopBar",
-  data: () => ({
-    drawer: false,
-    group: null,
-  }),
-  methods: {
-    toggleColorTheme() {
-      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-      localStorage.setItem(
-        "luna.color_theme",
-        `${this.$vuetify.theme.dark ? "dark" : "light"}`
-      );
+    name: 'AppTopBar',
+    data: () => ({
+      drawer: false,
+      group: null,
+      lojas:[]
+    }),
+    methods: {
+        toggleColorTheme() {
+this.$vuetify.theme.dark= !this.$vuetify.theme.dark;
+        localStorage.setItem("luna.color_theme",
+        `${this.$vuetify.theme.dark? "dark" : "light"}`);
+        },
     },
+    created() {
+    // this.$store.dispatch("redirectLogin");
+    fetch("https://it3-hbn-default-rtdb.firebaseio.com/ovosPascoa.json")
+      .then((response) => response.json())
+      .then((json) => {
+        json.forEach((item) => {
+          if (
+            this.lojas.filter((loja) => loja.id === item.local.id).length === 0
+          ) {
+            this.lojas.push(item.local);
+          }
+        });
+      });
   },
-};
+}
 </script>
 
 <style scoped>
