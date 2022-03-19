@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "nat@nat.nat",
+      "password": "$2a$10$GGYok1JKVOmMU1YGguGhfuzXx5z5TIA9umh0nD9A.gsR5Xd/9T6pm",
+      "name": "Natália",
+      "last_name": "Fonseca",
+      "role": "Cliente"
+    }
+  ]
+}
