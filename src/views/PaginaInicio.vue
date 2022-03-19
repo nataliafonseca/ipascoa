@@ -8,9 +8,9 @@
     >
     </v-img> -->
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec est sem,
-      vestibulum ut erat quis, consequat fringilla lectus. Praesent semper
-      efficitur tortor et semper. Vestibulum aliquet scelerisque vulputate.
+      Compre ovos de Páscoa para você ou para presentear alguém de maneira rápida e fácil!
+      Além de deixar o dia de alguém mais feliz, você ainda ajuda os revendedores da sua região!
+      Se você for um revendedor e quiser disponibilizar seus dados no site, basta se cadastrar!
       <br />
     </p>
     <p class="text-center text-h6">Confira nossas lojas:</p>
