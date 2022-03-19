@@ -2,14 +2,20 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 import PaginaInicio from "../views/PaginaInicio.vue";
+import PaginaSobre from "../views/PaginaSobre.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "home",
+    name: "inicio",
     component: PaginaInicio,
+  },
+  {
+    path: "/sobre",
+    name: "sobre",
+    component: PaginaSobre,
   },
 ];
 
