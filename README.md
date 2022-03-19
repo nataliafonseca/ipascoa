@@ -35,6 +35,13 @@ Cheque as [referências de configuração do Vue CLI](https://cli.vuejs.org/conf
 - [@luccaGL0](https://github.com/luccaGL0)
 - [@aisarllo](https://github.com/aisarllo)
 
+## Tecnologias
+- HTML
+- CSS
+- JavaScript
+- Vue.js
+- Vuetify
+
 ## Telas
 
 ![image](https://user-images.githubusercontent.com/43911177/159135876-b9be14b0-96e9-4816-9428-99a6d8c58d83.png)
