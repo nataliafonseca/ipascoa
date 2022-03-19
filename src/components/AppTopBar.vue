@@ -129,4 +129,5 @@ this.$vuetify.theme.dark= !this.$vuetify.theme.dark;
 .app-top-bar a {
   text-decoration: none;
 }
+
 </style>
