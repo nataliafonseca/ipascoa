@@ -45,12 +45,15 @@ export default {
   },
   methods: {
     doLogin() {
-      console.log({
+      this.$store.dispatch("login", {
         email: this.email,
         password: this.password,
       });
       this.$router.push("/");
     },
+  },
+  created() {
+    this.$store.dispatch("redirectHome");
   },
 };
 </script>

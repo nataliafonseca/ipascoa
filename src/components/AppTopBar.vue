@@ -1,5 +1,7 @@
 <template>
-    <div class="app-top-bar">
+  <div class="app-top-bar">
+    <v-app-bar color="green darken-4" dense dark>
+      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
     <v-app-bar color="green darken-4" dense dark>
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
@@ -25,6 +27,9 @@
       <!-- <v-btn icon>
         <v-icon>mdi-magnify</v-icon>
       </v-btn> -->
+      <v-btn icon @click="$store.dispatch('logout')">
+        <v-icon>mdi-logout</v-icon>
+      </v-btn>
 
         <v-menu left bottom></v-menu>
 
@@ -45,16 +50,16 @@
                 </v-list-item>
             </router-link>
 
-            <!-- <v-router-link to="/"> -->
+            <!-- <router-link to="/"> -->
                 <v-list-item>
                     <v-list-item-icon>
                         <v-icon>mdi-store</v-icon>
                     </v-list-item-icon>
                     <v-list-item-title>Posto Renoir</v-list-item-title>
                 </v-list-item>
-            <!-- </v-router-link> -->
+            <!-- </router-link> -->
 
-            <!-- <v-router-link to="/"> -->
+            <!-- <router-link to="/"> -->
                 <v-list-item>
                     <v-list-item-icon>
                         <v-icon>mdi-store</v-icon>
@@ -63,9 +68,9 @@
                         Quinta Beija-flor
                     </v-list-item-title>
                  </v-list-item>
-            <!-- </v-router-link> -->
+            <!-- </router-link> -->
 
-            <!-- <v-router-link to="/"> -->
+            <!-- <router-link to="/"> -->
                 <v-list-item>
                     <v-list-item-icon>
                         <v-icon>mdi-store</v-icon>
@@ -74,7 +79,7 @@
                         Passarela Raiz dejavú
                     </v-list-item-title>
                 </v-list-item>
-            <!-- </v-router-link> -->
+            <!-- </router-link> -->
 
            <router-link to="/registro">
                 <v-list-item>
@@ -97,8 +102,7 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    
-    </div>
+  </div>
 </template>
 
 <script>

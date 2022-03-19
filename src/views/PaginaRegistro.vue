@@ -88,17 +88,18 @@ export default {
   },
   methods: {
     doRegister() {
-      console.log({
+      this.$store.dispatch("register", {
         email: this.email,
         password: this.password,
         name: this.name,
         lastName: this.lastName,
         role: this.role,
       });
-      this.$router.push("/");
     },
   },
-  created() {},
+  created() {
+    this.$store.dispatch("redirectHome");
+  },
 };
 </script>
 
