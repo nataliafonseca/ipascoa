@@ -1,10 +1,12 @@
 <template>
   <v-container>
-    <h1 class="titulo text-center mb-1 mt-5">{{ informacao.nome }}</h1>
-    <h3 class="text-h7 text-center mb-3">
-      {{ informacao.endereco }}
-    </h3>
-
+    <h1 class="titulo text-center mb-1 mt-5">
+      {{ informacao.nome }}
+    </h1>
+      <h4 class="text-h7 text-center mb-3 endereco-h4">
+        {{ informacao.endereco }}
+        <v-icon color="green darken-1"> mdi-map-marker </v-icon>
+      </h4>
     <h2 class="text-h5 text-center mb-3 mt-5">Nossos Ovos</h2>
 
     <div v-for="produto in produtos" :key="produto.id">
@@ -92,3 +94,11 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+  .endereco-h4 {
+    font-weight: normal;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+  }
+</style>
