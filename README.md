@@ -1,24 +1,36 @@
-# hackathon-decola-vue
+# iPascoa
 
-## Project setup
+O iPascoa foi desenvolvido durante o Hackathon Decola, promovido pela empresa [Iteris](https://iteris.com.br).
+
+## Como executar
+### Primeiro, instale as dependências:
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Para executar em modo de desenvolvimento, com hot-reload:
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Para compilar a versão de produção:
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### Para rodar os linters:
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Para fazer uma configuração customizada:
+Cheque as [referências de configuração do Vue CLI](https://cli.vuejs.org/config/).
+
+## Equipe
+
+- [@nataliafonseca](https://github.com/nataliafonseca)
+- [@eltonracarvalho](https://github.com/eltonracarvalho)
+- [@AlineLourenco](https://github.com/AlineLourenco)
+- [@sarashb](https://github.com/sarashb)
+- [@luccaGL0](https://github.com/luccaGL0)
+- [@aisarllo](https://github.com/aisarllo)
