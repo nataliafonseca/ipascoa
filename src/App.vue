@@ -81,4 +81,5 @@ img {
 .v-enter-active {
   transition: all 0.3s;
 }
+
 </style>

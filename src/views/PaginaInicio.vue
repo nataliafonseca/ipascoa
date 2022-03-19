@@ -8,9 +8,10 @@
     >
     </v-img> -->
     <p>
-      Compre ovos de Páscoa para você ou para presentear alguém de maneira rápida e fácil!
-      Além de deixar o dia de alguém mais feliz, você ainda ajuda os revendedores da sua região!
-      Se você for um revendedor e quiser disponibilizar seus dados no site, basta se cadastrar!
+      Compre ovos de Páscoa para você ou para presentear alguém de maneira
+      rápida e fácil! Além de deixar o dia de alguém mais feliz, você ainda
+      ajuda os revendedores da sua região! Se você for um revendedor e quiser
+      disponibilizar seus dados no site, basta se cadastrar!
       <br />
     </p>
     <p class="text-center text-h6">Confira nossas lojas:</p>
@@ -63,7 +64,9 @@
             </v-list-item-icon>
 
             <v-list-item-content>
-              <v-list-item-title>{{ loja.endereco }}</v-list-item-title>
+              <v-list-item-title class="text-wrap">{{
+                loja.endereco
+              }}</v-list-item-title>
 
               <v-list-item-subtitle
                 >CEP: {{ loja.cep | formataCep }}</v-list-item-subtitle
