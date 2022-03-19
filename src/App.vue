@@ -2,7 +2,9 @@
   <v-app>
     <div class="mobile-container">
       <AppTopBar />
-      <router-view />
+      <main>
+        <router-view />
+      </main>
       <RodaPe />
     </div>
   </v-app>
@@ -32,7 +34,6 @@ export default {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    
 }
 
 ul {
@@ -61,6 +62,8 @@ img {
 }
 
 .mobile-container {
+  display: flex;
+  flex-direction: column;
   width: 500px;
   max-width: 100%;
   min-height: 100vh;
@@ -68,6 +71,10 @@ img {
   padding: 0;
   padding-bottom: 0px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+main {
+  flex: 1;
 }
 
 .page-container {
@@ -82,5 +89,4 @@ img {
 .v-enter-active {
   transition: all 0.3s;
 }
-
 </style>

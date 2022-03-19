@@ -3,14 +3,12 @@
     <v-form @submit.prevent="doLogin" class="login">
       <h2>Login</h2>
       <v-text-field
-        hide-details="auto"
         v-model="email"
         :rules="emailRules"
         label="E-mail"
         required
       ></v-text-field>
       <v-text-field
-        hide-details="auto"
         v-model="password"
         :rules="passwordRules"
         label="Password"

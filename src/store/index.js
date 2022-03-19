@@ -102,15 +102,13 @@ export default new Vuex.Store({
       const { sub: user_id } = decodeJwt(token);
       await context.dispatch("logUserById", user_id);
     },
-    redirectHome() {
-      const token = localStorage.getItem("ipascoa.token");
-      if (token) {
+    redirectHome(context) {
+      if (context.state.login) {
         router.push("/");
       }
     },
-    redirectLogin() {
-      const token = localStorage.getItem("ipascoa.token");
-      if (!token) {
+    redirectLogin(context) {
+      if (!context.state.login) {
         router.push("/login");
       }
     },

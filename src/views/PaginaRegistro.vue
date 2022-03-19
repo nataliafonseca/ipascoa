@@ -2,15 +2,7 @@
   <v-container>
     <v-form @submit.prevent="doRegister" class="login">
       <h2>Registro</h2>
-      <v-select
-        :items="roleItems"
-        v-model="role"
-        :rules="roleRules"
-        hide-details="auto"
-        label="Quem é você?"
-      ></v-select>
       <v-text-field
-        hide-details="auto"
         v-model="email"
         :rules="emailRules"
         label="E-mail"
@@ -18,7 +10,6 @@
         required
       ></v-text-field>
       <v-text-field
-        hide-details="auto"
         v-model="password"
         :rules="passwordRules"
         label="Senha"
@@ -26,7 +17,6 @@
         required
       ></v-text-field>
       <v-text-field
-        hide-details="auto"
         v-model="passwordConfirmation"
         :rules="passwordConfirmationRules"
         label="Confirme sua senha"
@@ -34,14 +24,12 @@
         required
       ></v-text-field>
       <v-text-field
-        hide-details="auto"
         v-model="name"
         :rules="nameRules"
         label="Nome"
         required
       ></v-text-field>
       <v-text-field
-        hide-details="auto"
         v-model="lastName"
         :rules="lastNameRules"
         label="Sobrenome"
@@ -62,9 +50,7 @@ export default {
   data() {
     return {
       valid: false,
-      roleItems: ["Cliente", "Vendedor"],
-      role: "",
-      roleRules: [(v) => !!v || "O campo é obrigatório"],
+      role: "Cliente",
       email: "",
       emailRules: [
         (v) => !!v || "O campo e-mail é obrigatório",

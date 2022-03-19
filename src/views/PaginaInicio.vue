@@ -88,7 +88,7 @@ export default {
     },
   },
   created() {
-    // this.$store.dispatch("redirectLogin");
+    this.$store.dispatch("redirectLogin");
     this.carregando = true;
     fetch("https://it3-hbn-default-rtdb.firebaseio.com/ovosPascoa.json")
       .then((response) => response.json())

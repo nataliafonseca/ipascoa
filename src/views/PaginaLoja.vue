@@ -82,22 +82,34 @@ export default {
       return str;
     },
   },
-  created() {
-    // this.$store.dispatch("redirectLogin");
-    this.carregando = true;
-    fetch("https://it3-hbn-default-rtdb.firebaseio.com/ovosPascoa.json")
-      .then((response) => response.json())
-      .then((json) => {
-        json.forEach((item) => {
-          if (Number(item.local.id) === Number(this.id)) {
-            this.produtos.push(item);
-            if (!this.informacao) {
-              this.informacao = item.local;
+  methods: {
+    fetchInformation(id) {
+      this.carregando = true;
+      this.produtos = [];
+      this.informacao = null;
+      fetch("https://it3-hbn-default-rtdb.firebaseio.com/ovosPascoa.json")
+        .then((response) => response.json())
+        .then((json) => {
+          json.forEach((item) => {
+            if (Number(item.local.id) === Number(id)) {
+              this.produtos.push(item);
+              if (!this.informacao) {
+                this.informacao = item.local;
+              }
             }
-          }
+          });
+          this.carregando = false;
         });
-        this.carregando = false;
-      });
+    },
+  },
+  created() {
+    this.$store.dispatch("redirectLogin");
+    this.fetchInformation(this.id);
+  },
+  beforeRouteUpdate(to, from, next) {
+    console.log(to, from);
+    this.fetchInformation(to.params.id);
+    next();
   },
 };
 </script>
