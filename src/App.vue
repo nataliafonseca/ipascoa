@@ -65,7 +65,6 @@ img {
   min-height: 100vh;
   margin: 0 auto;
   padding: 0;
-  padding-bottom: 120px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 

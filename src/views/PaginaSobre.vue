@@ -1,5 +1,5 @@
 <template>
-  <div class="page-container">
+  <v-container>
     <header>
       <h2>Sobre o <span class="logo-i">i</span>Pascoa</h2>
 
@@ -31,7 +31,7 @@
                   <v-progress-circular
                     indeterminate
                     :width="2"
-                    color="green-darken-4"
+                    color="green darken-1"
                   ></v-progress-circular>
                 </v-row>
               </template> </v-img
@@ -71,7 +71,7 @@
         </div>
       </v-card>
     </header>
-  </div>
+  </v-container>
 </template>
 
 <script>
