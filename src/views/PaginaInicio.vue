@@ -7,9 +7,9 @@
       alt="Ovos personalizados"
     >
     </v-img> -->
-    <p>
-      Compre ovos de Páscoa para você ou para presentear alguém de maneira rápida e fácil!
-      Além de deixar o dia de alguém mais feliz, você ainda ajuda os revendedores da sua região!
+    <p class="text-center font-weight-bold">
+      Compre ovos de Páscoa para você ou para presentear alguém de maneira rápida e fácil!</p>
+     <p class="text-center font-weight-bold"> Além de deixar o dia de alguém mais feliz, você ainda ajuda os revendedores da sua região!
       Se você for um revendedor e quiser disponibilizar seus dados no site, basta se cadastrar!
       <br />
     </p>
