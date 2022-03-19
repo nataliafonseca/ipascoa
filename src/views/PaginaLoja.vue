@@ -18,8 +18,8 @@
         <h2 class="text-h5 text-center mb-3 mt-5">Nossos Ovos</h2>
 
         <div v-for="produto in produtos" :key="produto.id">
-          <v-card max-width="375" class="mx-auto mb-6">
-            <v-img :src="produto.imagem" height="300px" dark>
+          <v-card max-width="375" class="mx-auto mb-6 card-produtos" >
+            <v-img :src="produto.imagem" height="300px" imagem-produto dark>
               <v-row class="fill-height">
                 <v-spacer></v-spacer>
 

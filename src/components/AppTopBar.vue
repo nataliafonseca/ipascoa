@@ -3,7 +3,7 @@
     <v-app-bar color="green darken-4" dense dark>
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-      <v-toolbar-title class="pl-0">iPascoa</v-toolbar-title>
+      <v-toolbar-title class="pl-0">iPáscoa</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -31,13 +31,6 @@
         <v-icon>mdi-moon-waning-crescent</v-icon>
       </v-btn>
 
-      <!-- <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn> -->
-
-      <!-- <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn> -->
       <v-btn icon @click="$store.dispatch('logout')">
         <v-icon>mdi-logout</v-icon>
       </v-btn>
