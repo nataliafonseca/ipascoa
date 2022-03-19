@@ -11,7 +11,7 @@
 
     <div v-for="produto in produtos" :key="produto.id">
       <v-card max-width="375" class="mx-auto mb-6">
-        <v-img :src="produto.imagem" height="300px" dark>
+        <v-img class="produto-imagem" :src="produto.imagem" height="300px" dark>
           <v-row class="fill-height">
             <v-spacer></v-spacer>
 
@@ -21,7 +21,7 @@
 
         <v-list two-line>
           <v-list-item>
-            <h4 class="text-h4 pl-12 pt-12">{{ produto.nome }}</h4>
+            <h4 class="text-h4 pl-12 pt-12 produto-h4">{{ produto.nome }}</h4>
           </v-list-item>
 
           <v-divider inset></v-divider>
@@ -30,9 +30,11 @@
 
           <v-list-item>
             <v-list-item-content>
-              <v-list-item-title>{{ produto.sabor }}</v-list-item-title>
+              <v-list-item-title class="sabor-produto">{{
+                produto.sabor
+              }}</v-list-item-title>
 
-              <v-list-item-subtitle
+              <v-list-item-subtitle class="preco-produto"
                 >Preço:
                 {{ produto.preco | formatarPreco }}</v-list-item-subtitle
               >
@@ -88,5 +90,20 @@ export default {
 .endereco-h4 {
   font-weight: normal;
   border-radius: 10px;
+}
+
+.produto-h4 {
+  font-weight: light;
+  text-align: center;
+}
+
+.preco-produto {
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.sabor-produto {
+  font-weight: bolder;
+  font-size: 18px;
 }
 </style>
