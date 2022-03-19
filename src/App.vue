@@ -1,12 +1,20 @@
 <template>
   <v-app>
-    <router-view />
+    <AppTopBar/>
+      <router-view />
   </v-app>
 </template>
 
 <script>
+
+import AppTopBar from "./components/AppTopBar.vue"
+
 export default {
   name: "App",
+
+  components: {
+    AppTopBar,
+  },
 };
 </script>
 
