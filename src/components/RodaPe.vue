@@ -11,7 +11,7 @@
       </v-card-text>
 
       <v-card-text class="white--text pt-0">
-        Somos uma platafoma que transfroma a sua páscoa conectando você com as
+        Somos uma platafoma que transfroma a sua pascóa conectando você as
         melhores produções artesanias de ovos de páscoa com incrível rapidez e
         facilidade.
       </v-card-text>
@@ -20,7 +20,7 @@
 
       <v-card-text class="white--textD">
         <v-icon> mdi-egg-easter </v-icon>
-        All copyrights reserved Ipascoa © 2022
+        All coprights reserved Ipascoa © 2022
         <v-icon> mdi-egg-easter </v-icon>
       </v-card-text>
     </v-card>

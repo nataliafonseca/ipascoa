@@ -31,7 +31,7 @@
         <v-icon>mdi-moon-waning-crescent</v-icon>
       </v-btn>
 
-      <v-btn icon @click="$store.dispatch('logout')">
+      <v-btn v-if="$store.state.login" icon @click="$store.dispatch('logout')">
         <v-icon>mdi-logout</v-icon>
       </v-btn>
 
@@ -52,17 +52,17 @@
               <v-list-item-title>Inicio</v-list-item-title>
             </v-list-item>
           </router-link>
-          
+
           <div v-for="loja in lojas" :key="loja.id">
-          <router-link :to="`/loja/${loja.id}`">
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-store</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>{{ loja.nome }}</v-list-item-title>
-          </v-list-item>
-          </router-link>
-        </div>
+            <router-link v-if="$store.state.login" :to="`/loja/${loja.id}`">
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-store</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>{{ loja.nome }}</v-list-item-title>
+              </v-list-item>
+            </router-link>
+          </div>
 
           <router-link to="/sobre">
             <v-list-item>
@@ -80,21 +80,22 @@
 
 <script>
 export default {
-    name: 'AppTopBar',
-    data: () => ({
-      drawer: false,
-      group: null,
-      lojas:[]
-    }),
-    methods: {
-        toggleColorTheme() {
-this.$vuetify.theme.dark= !this.$vuetify.theme.dark;
-        localStorage.setItem("luna.color_theme",
-        `${this.$vuetify.theme.dark? "dark" : "light"}`);
-        },
+  name: "AppTopBar",
+  data: () => ({
+    drawer: false,
+    group: null,
+    lojas: [],
+  }),
+  methods: {
+    toggleColorTheme() {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+      localStorage.setItem(
+        "luna.color_theme",
+        `${this.$vuetify.theme.dark ? "dark" : "light"}`
+      );
     },
-    created() {
-    // this.$store.dispatch("redirectLogin");
+  },
+  created() {
     fetch("https://it3-hbn-default-rtdb.firebaseio.com/ovosPascoa.json")
       .then((response) => response.json())
       .then((json) => {
@@ -107,7 +108,7 @@ this.$vuetify.theme.dark= !this.$vuetify.theme.dark;
         });
       });
   },
-}
+};
 </script>
 
 <style scoped>
