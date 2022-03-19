@@ -8,6 +8,7 @@
       <v-spacer></v-spacer>
 
       <v-btn
+        x-small
         icon
         elevation="2"
         fab
@@ -19,6 +20,7 @@
       </v-btn>
 
       <v-btn
+        x-small
         icon
         elevation="2"
         fab
@@ -110,19 +112,21 @@
 
 <script>
 export default {
-    name: 'AppTopBar',
-    data: () => ({
-      drawer: false,
-      group: null,
-    }),
-    methods: {
-        toggleColorTheme() {
-this.$vuetify.theme.dark= !this.$vuetify.theme.dark;
-        localStorage.setItem("luna.color_theme",
-        `${this.$vuetify.theme.dark? "dark" : "light"}`);
-        },
-    }
-}
+  name: "AppTopBar",
+  data: () => ({
+    drawer: false,
+    group: null,
+  }),
+  methods: {
+    toggleColorTheme() {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+      localStorage.setItem(
+        "luna.color_theme",
+        `${this.$vuetify.theme.dark ? "dark" : "light"}`
+      );
+    },
+  },
+};
 </script>
 
 <style scoped>

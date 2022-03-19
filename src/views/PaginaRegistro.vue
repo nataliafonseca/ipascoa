@@ -1,5 +1,5 @@
 <template>
-  <div class="page-container">
+  <v-container>
     <v-form @submit.prevent="doRegister" class="login">
       <h2>Registro</h2>
       <v-select
@@ -53,7 +53,7 @@
       Já possui um usuário?
       <router-link class="link" :to="{ name: 'login' }">Entre</router-link>.
     </p>
-  </div>
+  </v-container>
 </template>
 
 <script>
