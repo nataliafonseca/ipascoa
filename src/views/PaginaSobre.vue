@@ -9,7 +9,7 @@
       </p>
       <p>
         O código fonte da aplicação pode ser acessado
-        <a href="https://github.com/nataliafonseca/repo">clicando aqui</a>.
+        <a href="https://github.com/nataliafonseca/ipascoa">clicando aqui</a>.
       </p>
 
       <h3>Desenvolvedores</h3>
