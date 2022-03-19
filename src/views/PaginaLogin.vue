@@ -1,5 +1,5 @@
 <template>
-  <div class="page-container">
+  <v-container>
     <v-form @submit.prevent="doLogin" class="login">
       <h2>Login</h2>
       <v-text-field
@@ -25,7 +25,7 @@
         >Registre-se</router-link
       >.
     </p>
-  </div>
+  </v-container>
 </template>
 
 <script>
