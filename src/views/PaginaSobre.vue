@@ -1,10 +1,10 @@
 <template>
   <v-container>
     <header>
-      <h2>Sobre o <span class="logo-i">i</span>Pascoa</h2>
+      <h2>Sobre o <span class="logo-i">i</span>Páscoa</h2>
 
       <p>
-        O iPascoa foi desenvolvido durante o Hackathon Decola, edição Luna,
+        O iPáscoa foi desenvolvido durante o Hackathon Decola, edição Luna,
         promovido pela Iteris.
       </p>
       <p>
@@ -158,9 +158,5 @@ h3 {
 
 .c-contact a p {
   margin: 0;
-}
-
-a {
-  color: #A5D6A7;
 }
 </style>
