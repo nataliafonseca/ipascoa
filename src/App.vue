@@ -3,18 +3,21 @@
     <div class="mobile-container">
       <AppTopBar />
       <router-view />
+      <RodaPe/>
     </div>
   </v-app>
 </template>
 
 <script>
 import AppTopBar from "./components/AppTopBar.vue";
+import RodaPe from "./components/RodaPe.vue";
 
 export default {
   name: "App",
 
   components: {
     AppTopBar,
+    RodaPe,
   },
 };
 </script>
