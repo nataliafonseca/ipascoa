@@ -15,6 +15,7 @@
           {{ informacao.endereco }} - CEP {{ informacao.cep | formataCep }}
           <v-icon color="green darken-1"> mdi-map-marker </v-icon>
         </h4>
+        <v-divider></v-divider>
         <h2 class="text-h5 text-center mb-3 mt-5">Nossos Ovos</h2>
 
         <div v-for="produto in produtos" :key="produto.id">

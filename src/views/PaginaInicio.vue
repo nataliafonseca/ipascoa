@@ -19,6 +19,7 @@
           disponibilizar seus dados no site, basta se cadastrar!
           <br />
         </p>
+        <v-divider></v-divider>
         <v-spacer></v-spacer>
         <p class="text-center text-h6">Confira nossas lojas:</p>
         <div v-for="loja in lojas" :key="loja.id">
