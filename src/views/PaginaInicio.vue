@@ -73,9 +73,25 @@
 <script>
 export default {
   name: "PaginaInicio",
-  // created() {
-  //   this.$store.dispatch("redirectLogin");
-  // },
+  data() {
+    return {
+      lojas: [],
+    };
+  },
+  created() {
+    // this.$store.dispatch("redirectLogin");
+    fetch("https://it3-hbn-default-rtdb.firebaseio.com/ovosPascoa.json")
+      .then((response) => response.json())
+      .then((json) => {
+        json.forEach((item) => {
+          if (
+            this.lojas.filter((loja) => loja.id === item.local.id).length === 0
+          ) {
+            this.lojas.push(item.local);
+          }
+        });
+      });
+  },
 };
 </script>
 
