@@ -2,6 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 import PaginaInicio from "../views/PaginaInicio.vue";
+import PaginaLogin from "../views/PaginaLogin.vue";
+import PaginaRegistro from "../views/PaginaRegistro.vue";
 import PaginaSobre from "../views/PaginaSobre.vue";
 
 Vue.use(VueRouter);
@@ -16,6 +18,16 @@ const routes = [
     path: "/sobre",
     name: "sobre",
     component: PaginaSobre,
+  },
+  {
+    path: "/registro",
+    name: "registro",
+    component: PaginaRegistro,
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: PaginaLogin,
   },
 ];
 
