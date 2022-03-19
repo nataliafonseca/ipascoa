@@ -14,59 +14,63 @@
       <br />
     </p>
     <p class="text-center text-h6">Confira nossas lojas:</p>
-
-    <v-card max-width="375" class="mx-auto">
-      <v-img
-        src="https://www.pngitem.com/pimgs/m/300-3000637_easter-bunny-easter-egg-easter-eggs-in-a.png"
-        height="300px"
-        dark
+    <div v-for="loja in lojas" :key="loja.id">
+      <v-card
+        @click="$router.push(`/loja/${loja.id}`)"
+        max-width="375"
+        class="mx-auto mb-6"
       >
-        <v-row class="fill-height">
-          <v-card-title>
-            <v-btn dark icon>
-              <v-icon>mdi-chevron-left</v-icon>
-            </v-btn>
+        <v-img
+          src="https://www.pngitem.com/pimgs/m/300-3000637_easter-bunny-easter-egg-easter-eggs-in-a.png"
+          height="300px"
+          dark
+        >
+          <v-row class="fill-height">
+            <v-card-title>
+              <v-btn dark icon>
+                <v-icon>mdi-chevron-left</v-icon>
+              </v-btn>
+
+              <v-spacer></v-spacer>
+
+              <v-btn dark icon class="mr-4">
+                <v-icon>mdi-pencil</v-icon>
+              </v-btn>
+
+              <v-btn dark icon>
+                <v-icon>mdi-dots-vertical</v-icon>
+              </v-btn>
+            </v-card-title>
 
             <v-spacer></v-spacer>
 
-            <v-btn dark icon class="mr-4">
-              <v-icon>mdi-pencil</v-icon>
-            </v-btn>
+            <v-card-title class="white--text pl-12 pt-12"> </v-card-title>
+          </v-row>
+        </v-img>
 
-            <v-btn dark icon>
-              <v-icon>mdi-dots-vertical</v-icon>
-            </v-btn>
-          </v-card-title>
+        <v-list two-line>
+          <v-list-item>
+            <h4 class="text-h4 pl-12 pt-12">{{ loja.nome }}</h4>
+          </v-list-item>
 
-          <v-spacer></v-spacer>
+          <v-divider inset></v-divider>
 
-          <v-card-title class="white--text pl-12 pt-12"> </v-card-title>
-        </v-row>
-      </v-img>
+          <v-divider inset></v-divider>
 
-      <v-list two-line>
-        <v-list-item>
-          <h4 class="text-h4 pl-12 pt-12>Posto Renoir">Posto Renoir</h4>
-        </v-list-item>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="green darken-1"> mdi-map-marker </v-icon>
+            </v-list-item-icon>
 
-        <v-divider inset></v-divider>
+            <v-list-item-content>
+              <v-list-item-title>{{ loja.endereco }}</v-list-item-title>
 
-        <v-divider inset></v-divider>
-
-        <v-list-item>
-          <v-list-item-icon>
-            <v-icon color="green darken-1"> mdi-map-marker </v-icon>
-          </v-list-item-icon>
-
-          <v-list-item-content>
-            <v-list-item-title
-              >Rua Taighum LLL, 566 - Paisagem Loud</v-list-item-title
-            >
-            <v-list-item-subtitle> Manaus - AM</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-card>
+              <v-list-item-subtitle>CEP: {{ loja.cep }}</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-card>
+    </div>
   </v-container>
 </template>
 
