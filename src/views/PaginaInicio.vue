@@ -65,7 +65,9 @@
             <v-list-item-content>
               <v-list-item-title>{{ loja.endereco }}</v-list-item-title>
 
-              <v-list-item-subtitle>CEP: {{ loja.cep }}</v-list-item-subtitle>
+              <v-list-item-subtitle
+                >CEP: {{ loja.cep | formataCep }}</v-list-item-subtitle
+              >
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -81,6 +83,12 @@ export default {
     return {
       lojas: [],
     };
+  },
+  filters: {
+    formataCep(valor) {
+      var str = valor.slice(0, 5) + "-" + valor.slice(5);
+      return str;
+    },
   },
   created() {
     // this.$store.dispatch("redirectLogin");

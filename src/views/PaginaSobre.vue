@@ -31,7 +31,7 @@
                   <v-progress-circular
                     indeterminate
                     :width="2"
-                    color="teal"
+                    color="green-darken-4"
                   ></v-progress-circular>
                 </v-row>
               </template> </v-img
