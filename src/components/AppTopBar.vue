@@ -8,6 +8,7 @@
       <v-spacer></v-spacer>
 
       <v-btn
+        x-small
         icon
         elevation="2"
         fab
