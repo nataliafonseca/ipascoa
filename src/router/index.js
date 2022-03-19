@@ -22,9 +22,6 @@ const routes = [
     component: PaginaSobre,
   },
   {
-<<<<<<< HEAD
-    
-=======
     path: "/registro",
     name: "registro",
     component: PaginaRegistro,
@@ -33,11 +30,11 @@ const routes = [
     path: "/login",
     name: "login",
     component: PaginaLogin,
-
+  },
+  {
     path: "/loja",
     name: "loja",
     component: PaginaLoja,
->>>>>>> 40ce64c2315995807517365a05e99b1fbbda701f
   },
 ];
 
